@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Django Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e4e4e4;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(15, 15, 30, 0.95);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: #e4e4e4;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            background: rgba(74, 144, 226, 0.2);
+            color: #4a90e2;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: #4a90e2;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4a90e2, #63b3ed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .content-section {
+            background: rgba(30, 30, 50, 0.6);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .content-section h2 {
+            color: #4a90e2;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section p {
+            color: #c0c0c0;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            background: rgba(74, 144, 226, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(74, 144, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: rgba(74, 144, 226, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .skill-item h3 {
+            color: #4a90e2;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-item p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(15, 15, 30, 0.95);
+            margin-top: 4rem;
+            color: #808080;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about" class="active">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">About This Project</h1>
+        <p class="subtitle">My journey into Django and web development</p>
+
+        <div class="content-section">
+            <h2>What is Django?</h2>
+            <p>
+                Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. 
+                Built by experienced developers, it takes care of much of the hassle of web development, so you can focus 
+                on writing your app without needing to reinvent the wheel.
+            </p>
+            <p>
+                It's free, open source, and used by some of the world's largest websites including Instagram, Pinterest, 
+                and Mozilla. Django follows the Model-View-Template (MVT) architectural pattern and emphasizes reusability 
+                and "don't repeat yourself" (DRY) principles.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>My Learning Goals</h2>
+            <p>
+                Through this project, I'm exploring Django's powerful features and learning how to build robust, 
+                scalable web applications. My focus areas include understanding Django's ORM, mastering template 
+                rendering, implementing authentication systems, and creating RESTful APIs.
+            </p>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Models & ORM</h3>
+                    <p>Database design</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Views & URLs</h3>
+                    <p>Request handling</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Templates</h3>
+                    <p>Dynamic rendering</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Authentication</h3>
+                    <p>User management</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Why Django?</h2>
+            <p>
+                Django was chosen for this learning journey because of its comprehensive documentation, strong 
+                community support, and "batteries included" philosophy. It provides everything needed to build 
+                a complete web application right out of the box, making it perfect for both learning and 
+                production use.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Django Learning Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
